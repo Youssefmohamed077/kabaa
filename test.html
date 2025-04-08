@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>قائمة الطعام</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .page {
+      display: grid;
+      
+      padding: 0px;
+      gap: 30px;
+    }
+
+    /* القائمة اليمنى */
+    .main-menu {
+      flex: 3;
+       display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+    }
+
+    .menu-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .food-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.food-item {
+  display: flex
+;
+    flex-direction: unset;
+    align-items: anchor-center;
+    width: 45%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+}
+
+.food-item img {
+  width: 120px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.food-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.food-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.food-desc {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.food-price {
+  font-weight: bold;
+  color: green;
+}
+
+    /* الأكثر مبيعًا */
+    .sidebar {
+      flex: 1;
+    max-width: 1300px;
+    }
+
+    .sidebar h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .offer {
+      display: flex;
+      flex-direction: row;
+      background-color: #fff3e0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .offer img {
+      width: 100px;
+      object-fit: cover;
+    }
+
+    .offer-content {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .offer-title {
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .offer-desc {
+      font-size: 12px;
+      color: #444;
+      margin-bottom: 5px;
+    }
+
+    .offer-price {
+      color: green;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .food-item a{
+      text-decoration: none;
+      color: black;
+    }
+
+    @media (max-width: 768px) {
+      .page {
+        flex-direction: column;
+      }
+
+      .food-item {
+        width: 100%;
+      }
+
+      .sidebar {
+        max-width: 95%;
+      }
+
+      .offer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .offer img {
+        width: 100%;
+      }
+
+      .offer-content {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="start">
+        <h1 class="logo">كباب صويلح</h1>
+        </h1>
+        <div class="main">
+            <input type="search" id="search" class="search" placeholder="بحث">
+
+        </div>
+        <div class="offeer">
+            <h1>عروضنا <img src="images/fire.png" style="padding: 3px;
+margin: 0px;" height="21.5px"></h1>
+        </div>
+        <div class="photo">
+            <img src="images/offe.jpeg" alt="offer" class="phot">
+
+
+
+        </div>
+</header>
+<div class="container">
+    <h1>قائمة الطعام</h1>
+</div>
+
+
+
+
+<div class="conn">
+    <div class="menu">
+        <ul>
+            <li class="active"><a href="#">🔥 الأكثر مبيعًا</a></li>
+            <li><a href="#">باجة</a>
+            </li>
+            <li><a href="#">أسماك</a></li>
+            <li><a href="#">سلطات</a></li>
+            <li><a href="#">ساندويتشات</a></li>
+            
+        </ul>
+    </div>
+    <div class="sidebar">
+        <div class="foodF">
+        <div class="foodH">
+            
+            </div>
+
+<div class="page">
+
+  <!-- القسم الرئيسي -->
+  <div class="main-menu">
+    <h1>🔥 الأكثر مبيعًا</h1>
+    <div class="food-list">
+
+      <div class="food-item"><a href="#">
+        <img src="images/sha.jpg" alt=" ">
+        <div class="food-content">
+        <div class="food-title">ضلع محشي ورق عنب</div>
+        <div class="food-desc">لحم ضلع محشي بورق عنب</div>
+        <div class="food-price">110 ريال</div>
+      </a>
+      </div>
+      </div>
+
+      <div class="food-item"><a href="#">
+        <img src="images/sha.jpg" alt=" ">
+        <div class="food-content">
+        <div class="food-title">ضلع محشي ورق عنب</div>
+        <div class="food-desc">لحم ضلع محشي بورق عنب</div>
+        <div class="food-price">110 ريال</div>
+      </a>
+      </div>
+      </div>
+      <div class="food-item"><a href="#">
+        <img src="images/sha.jpg" alt=" ">
+        <div class="food-content">
+        <div class="food-title">ضلع محشي ورق عنب</div>
+        <div class="food-desc">لحم ضلع محشي بورق عنب</div>
+        <div class="food-price">110 ريال</div>
+      </a>
+      </div>
+      </div>
+      <div class="food-item"><a href="#">
+        <img src="images/sha.jpg" alt=" ">
+        <div class="food-content">
+        <div class="food-title">ضلع محشي ورق عنب</div>
+        <div class="food-desc">لحم ضلع محشي بورق عنب</div>
+        <div class="food-price">110 ريال</div>
+      </a>
+      </div>
+      </div>
+      <div class="food-item"><a href="#">
+        <img src="images/sha.jpg" alt=" ">
+        <div class="food-content">
+        <div class="food-title">ضلع محشي ورق عنب</div>
+        <div class="food-desc">لحم ضلع محشي بورق عنب</div>
+        <div class="food-price">110 ريال</div>
+      </a>
+      </div>
+      </div>
+      <div class="food-item"><a href="#">
+        <img src="images/sha.jpg" alt=" ">
+        <div class="food-content">
+        <div class="food-title">ضلع محشي ورق عنب</div>
+        <div class="food-desc">لحم ضلع محشي بورق عنب</div>
+        <div class="food-price">110 ريال</div>
+      </a>
+      </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- الأكثر مبيعًا -->
+  
+
+</body>
+</html>
